@@ -40,7 +40,7 @@ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
                     </ul>
                     <h1 align="center">DELETE DATA FROM DATABASE</h1>
 
-                    <ul margin: auto;>
+                    <ul margin: center;>
                          <form name="DeleteData" action="DeleteData.php" method="POST" >
                             <p text-align: center;>Toy ID:</p>
                             <input type="text" name="ToyID" /><br>
