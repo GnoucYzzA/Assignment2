@@ -2,12 +2,22 @@
 <html>
 <body>
 
-<h1>INSERT DATA TO DATABASE</h1>
+<h1>UPDATE DATA TO DATABASE</h1>
 
 <?php
 ini_set('display_errors', 1);
 echo "Update database!";
 ?>
+
+<ul>
+    <form name="UpdateData" action="UpdateData.php" method="POST" >
+    <li>Toy ID:</li><li><input type="text" name="ToyID" /></li>
+    <li>Toy Name:</li><li><input type="text" name="ToyName" /></li>
+    <li>Price:</li><li><input type="text" name="Price" /></li>
+    <li>Date:</li><li><input type="text" name="Date" /></li>
+    <li><button type="submit" value="submit">Update</button> </li>
+</form>
+</ul>
 
 <?php
 
@@ -19,7 +29,7 @@ if (empty(getenv("DATABASE_URL"))){
      
    $db = parse_url(getenv("DATABASE_URL"));
    $pdo = new PDO("pgsql:" . sprintf(
-        "host=ec2-174-129-240-67.compute-1.amazonaws.com;port=5432;user=wrflrxtavasvqh;password=fbfef36049fbd28f1200e3a775a389e014838e86522765e67782f9cf7a3f516b;dbname=d3mmhribgmc6bf",
+        "host=ec2-54-83-9-36.compute-1.amazonaws.com;port=5432;user=mnvkrpgighmovm;password=ec88450374a0be701bd72da2753e03f48af3f3e48c9644b862a58dd677d22cd5;dbname=dfv6jafh0t2m8e",
         $db["host"],
         $db["port"],
         $db["user"],
@@ -28,26 +38,16 @@ if (empty(getenv("DATABASE_URL"))){
    ));
 }  
 
-//$sql = 'UPDATE student '
-//                . 'SET name = :name, '
-//                . 'WHERE ID = :id';
-// 
-//      $stmt = $pdo->prepare($sql);
-//      //bind values to the statement
-//        $stmt->bindValue(':name', 'Lee');
-//        $stmt->bindValue(':id', 'SV02');
-        // update data in the database
-//        $stmt->execute();
 
-        // return the number of row affected
-        //return $stmt->rowCount();
-$sql = "UPDATE student SET fname = 'Lee Chan Do' WHERE stuid = 'SV02'";
-      $stmt = $pdo->prepare($sql);
+$sql = "UPDATE sneakertoy SET tname = '$_POST[ToyName]',unitprice = '$_POST[Price]', checkdate = '$_POST[Date]' WHERE toyid = '$_POST[ToyID]'";
+$stmt = $pdo->prepare($sql);
+
+if(is_null($_POST[ToyID]) == FALSE){
 if($stmt->execute() == TRUE){
     echo "Record updated successfully.";
 } else {
     echo "Error updating record. ";
-}
+}}
     
 ?>
 </body>
