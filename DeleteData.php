@@ -5,7 +5,6 @@
 body{
   background-color: #8EC5FC;
 background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
-
 }
 </style>
 <body>
@@ -47,8 +46,8 @@ echo "Delete database!";
 ?>
 <ul>
     <form name="DeleteData" action="DeleteData.php" method="POST" >
-    <li>Toy ID:</li><li><input type="text" name="ToyID" /></li>
-    <li><button type="submit" value="submit">Delete</button> </li>
+    <h2 text-align: center;>Toy ID:</h2><input type="text" name="ToyID" />
+    <button type="submit" value="submit">Delete</button>
 </form>
 </ul>
 <?php
