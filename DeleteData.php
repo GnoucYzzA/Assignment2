@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 <style>
 body{
   background-color: #8EC5FC;
@@ -47,6 +49,7 @@ echo "Delete database!";
 <ul>
     <form name="DeleteData" action="DeleteData.php" method="POST" >
     <h2 text-align: center;>Toy ID:</h2><input type="text" name="ToyID" />
+    <br>
     <button type="submit" value="submit">Delete</button>
 </form>
 </ul>
