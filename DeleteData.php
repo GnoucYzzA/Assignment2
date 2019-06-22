@@ -51,7 +51,7 @@ echo "Delete database!";
     <p text-align: center;>Toy ID:</p>
     <input type="text" name="ToyID" />
     <br>
-    <button type="button" class="btn btn-primary">Delete</button>
+    <button type="submit" class="btn btn-primary">Delete</button>
 </form>
 </ul>
 <?php
