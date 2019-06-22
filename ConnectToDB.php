@@ -6,38 +6,10 @@ body{
   background-color: #8EC5FC;
 background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 
-
 }
 </style>
 <body>
 
-
-<?php
-if (empty(getenv("DATABASE_URL"))){
-    echo '<p>The DB does not exist</p>';
-    $pdo = new PDO('pgsql:host=localhost;port=5432;dbname=mydb', 'postgres', '123456');
-}  else {
-     echo '<p>The DB exists</p>';
-     echo getenv("dbname");
-   $db = parse_url(getenv("DATABASE_URL"));
-   $pdo = new PDO("pgsql:" . sprintf(
-        "host=ec2-54-83-9-36.compute-1.amazonaws.com;port=5432;user=mnvkrpgighmovm;password=ec88450374a0be701bd72da2753e03f48af3f3e48c9644b862a58dd677d22cd5;dbname=dfv6jafh0t2m8e",
-        $db["host"],
-        $db["port"],
-        $db["user"],
-        $db["pass"],
-        ltrim($db["path"], "/")
-   ));
-}  
-
-$sql = "SELECT * FROM sneakertoy";
-$stmt = $pdo->prepare($sql);
-//Thiết lập kiểu dữ liệu trả về
-$stmt->setFetchMode(PDO::FETCH_ASSOC);
-$stmt->execute();
-$resultSet = $stmt->fetchAll();
-echo '<p>Transaction information:</p>';
-?>
 <div>
 				<div id="menu-content">
 					<!-- Navigation -->
@@ -66,8 +38,36 @@ echo '<p>Transaction information:</p>';
 							<a href="DeleteData.php" title="Delete">Delete</a>
 						</li>
 					</ul>
-					
-				</div>
+</div>
+        </div>
+<?php
+if (empty(getenv("DATABASE_URL"))){
+    echo '<p>The DB does not exist</p>';
+    $pdo = new PDO('pgsql:host=localhost;port=5432;dbname=mydb', 'postgres', '123456');
+}  else {
+     echo '<p>The DB exists</p>';
+     echo getenv("dbname");
+   $db = parse_url(getenv("DATABASE_URL"));
+   $pdo = new PDO("pgsql:" . sprintf(
+        "host=ec2-54-83-9-36.compute-1.amazonaws.com;port=5432;user=mnvkrpgighmovm;password=ec88450374a0be701bd72da2753e03f48af3f3e48c9644b862a58dd677d22cd5;dbname=dfv6jafh0t2m8e",
+        $db["host"],
+        $db["port"],
+        $db["user"],
+        $db["pass"],
+        ltrim($db["path"], "/")
+   ));
+}  
+
+$sql = "SELECT * FROM sneakertoy";
+$stmt = $pdo->prepare($sql);
+//Thiết lập kiểu dữ liệu trả về
+$stmt->setFetchMode(PDO::FETCH_ASSOC);
+$stmt->execute();
+$resultSet = $stmt->fetchAll();
+echo '<p>Transaction information:</p>';
+?>
+
+        
 <div id="container">
 <table class="table striped" width="100%" height="40%", border="1">
     <thead>
@@ -99,6 +99,6 @@ echo '<p>Transaction information:</p>';
     </tbody>
   </table>
 </div>
-</div>
+
 </body>
 </html>
