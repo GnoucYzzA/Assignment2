@@ -14,9 +14,9 @@ list-style: none;
 <h2>Enter data into table</h2>
 <ul>
     <form name="InsertData" action="InsertData.php" method="POST" >
-<li>Sneaker ID:</li><li><input type="text" name="sneakerid" /></li>
-<li>Sneaker Name:</li><li><input type="text" name="sneakername" /></li>
-<li>Price:</li><li><input type="text" name="unitprice" /></li>
+<li>Sneaker ID:</li><li><input type="text" name="SneakerID" /></li>
+<li>Sneaker Name:</li><li><input type="text" name="SneakerName" /></li>
+<li>Price:</li><li><input type="text" name="Price" /></li>
 <li><input type="submit" /></li>
 </form>
 </ul>
@@ -53,7 +53,7 @@ if($pdo === false){
 //$stmt->execute();
 //$sql = "INSERT INTO student(stuid, fname, email, classname) VALUES('SV02', 'Hong Thanh','thanhh@fpt.edu.vn','GCD018')";
 $sql = "INSERT INTO sneaker(sneakerid, sneakername, unitprice)"
-        . " VALUES('$_POST[sneakerid]','$_POST[sneakername]','$_POST[unitprice]')";
+        . " VALUES('$_POST[SneakerID]','$_POST[SneakerName]','$_POST[Price]')";
 $stmt = $pdo->prepare($sql);
 //$stmt->execute();
  if (is_null($_POST[sneakerid])) {
