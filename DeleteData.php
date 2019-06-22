@@ -5,8 +5,8 @@
 <h1>DELETE DATA FROM DATABASE</h1>
 
 <?php
-ini_set('display_errors', 1);
-echo "Insert database!";
+
+echo "Delete database!";
 ?>
 <ul>
     <form name="DeleteData" action="DeleteData.php" method="POST" >
