@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<h1>INSERT DATA TO DATABASE</h1>
+<h1>DELETE DATA FROM DATABASE</h1>
 
 <?php
 ini_set('display_errors', 1);
@@ -19,7 +19,7 @@ if (empty(getenv("DATABASE_URL"))){
      
    $db = parse_url(getenv("DATABASE_URL"));
    $pdo = new PDO("pgsql:" . sprintf(
-        "host=ec2-174-129-240-67.compute-1.amazonaws.com;port=5432;user=wrflrxtavasvqh;password=fbfef36049fbd28f1200e3a775a389e014838e86522765e67782f9cf7a3f516b;dbname=d3mmhribgmc6bf",
+        "host=ec2-54-83-9-36.compute-1.amazonaws.com;port=5432;user=mnvkrpgighmovm;password=ec88450374a0be701bd72da2753e03f48af3f3e48c9644b862a58dd677d22cd5;dbname=dfv6jafh0t2m8e",
         $db["host"],
         $db["port"],
         $db["user"],
@@ -28,13 +28,15 @@ if (empty(getenv("DATABASE_URL"))){
    ));
 }  
 
-$sql = "DELETE FROM student WHERE stuid = 'SV02'";
+$sql = "DELETE FROM sneakertoy WHERE toyid = '$_POST[ToyID]'";
 $stmt = $pdo->prepare($sql);
-if($stmt->execute() == TRUE){
-    echo "Record deleted successfully.";
-} else {
-    echo "Error deleting record: ";
-}
+
+if(is_null ($_POST[ToyID]) == FALSE) {
+    if($stmt->execute() == TRUE){
+        echo "Record deleted successfully.";
+}   else {
+        echo "Error deleting record: ";
+}}
 
 ?>
 </body>
