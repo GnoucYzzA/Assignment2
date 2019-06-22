@@ -6,7 +6,7 @@
 
 <?php
 ini_set('display_errors', 1);
-echo "Welcome to ATN Company";
+echo "Welcome to ATN company!";
 ?>
 
 <?php
@@ -35,18 +35,39 @@ $stmt = $pdo->prepare($sql);
 $stmt->setFetchMode(PDO::FETCH_ASSOC);
 $stmt->execute();
 $resultSet = $stmt->fetchAll();
-echo '<p>Sneakers information:</p>';
-foreach ($resultSet as $row) {
-	echo $row['sneakerid'];
-        echo "    ";
-        echo $row['sneakername'];
-        echo "    ";
-        echo $row['unitprice'];
-        echo "    ";
-        echo $row['date'];
-        echo "<br/>";
-}
+echo '<p>Students information:</p>';
 
 ?>
+<div id="container">
+<table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Sneaker ID</th>
+        <th>SneakerName</th>
+        <th>Price</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php
+      // tạo vòng lặp 
+         //while($r = mysql_fetch_array($result)){
+             foreach ($resultSet as $row) {
+      ?>
+   
+      <tr>
+        <td scope="row"><?php echo $row['sneakerid'] ?></td>
+        <td><?php echo $row['sneakername'] ?></td>
+        <td><?php echo $row['unitprice'] ?></td>
+        <td><?php echo $row['date'] ?></td>
+        
+      </tr>
+     
+      <?php
+        }
+      ?>
+    </tbody>
+  </table>
+</div>
 </body>
 </html>
