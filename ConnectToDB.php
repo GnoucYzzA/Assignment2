@@ -30,7 +30,7 @@ if (empty(getenv("DATABASE_URL"))){
    ));
 }  
 
-$sql = "SELECT * FROM sneaker";
+$sql = "SELECT * FROM sneakertoy";
 $stmt = $pdo->prepare($sql);
 //Thiết lập kiểu dữ liệu trả về
 $stmt->setFetchMode(PDO::FETCH_ASSOC);
@@ -43,8 +43,8 @@ echo '<p>Students information:</p>';
 <table class="table table-bordered table-condensed" border="1">
     <thead>
       <tr>
-        <th>SneakerID</th>
-        <th>SneakerName</th>
+        <th>ToyID</th>
+        <th>ToyName</th>
         <th>Price</th>
         <th>Date</th>
       </tr>
@@ -57,8 +57,8 @@ echo '<p>Students information:</p>';
       ?>
    
       <tr>
-        <td scope="row"><?php echo $row['sneakerid'] ?></td>
-        <td><?php echo $row['sneakername'] ?></td>
+        <td scope="row"><?php echo $row['toyid'] ?></td>
+        <td><?php echo $row['tname'] ?></td>
         <td><?php echo $row['unitprice'] ?></td>
         <td><?php echo $row['checkdate'] ?></td>
         
