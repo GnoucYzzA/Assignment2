@@ -42,7 +42,7 @@ echo '<p>Students information:</p>';
 <table class="table table-bordered table-condensed">
     <thead>
       <tr>
-        <th>Sneaker ID</th>
+        <th>SneakerID</th>
         <th>SneakerName</th>
         <th>Price</th>
         <th>Date</th>
