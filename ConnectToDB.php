@@ -35,7 +35,7 @@ $stmt->execute();
 $resultSet = $stmt->fetchAll();
 echo '<p>Transaction information:</p>';
 ?>
-<div id="menu">
+<div>
 				<div id="menu-content">
 					<!-- Navigation -->
 					<label id="collapse" for="_1">
