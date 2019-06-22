@@ -56,7 +56,7 @@
 						<li class="submenu" id="logoset">
 							<a href="index.php">
 								<img id="logo" src="images/Sneaker_logo.svg"/> <br/> 
-								<img id="companyname" src="images/logo_name.png"/>
+								<img id="sneaker" src="images/logo_name.png"/>
 							</a>
 						</li>
 						<li class="submenu">

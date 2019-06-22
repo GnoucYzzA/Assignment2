@@ -3,12 +3,7 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <body>
 
-<h1>DATABASE CONNECTION</h1>
 
-<?php
-ini_set('display_errors', 1);
-echo "Welcome to ATN company!";
-?>
 <div id="menu">
 				<div id="menu-content">
 					<!-- Navigation -->
@@ -25,7 +20,7 @@ echo "Welcome to ATN company!";
 							<a href="InsertData.php" target="_blank" title="Insert">Insert</a>
 						</li>
 						<li class="submenu" id="logoset">
-							<a href="index.html">
+							<a href="index.php">
 								<img id="logo" src="images/Sneaker_logo.svg"/> <br/> 
 								<img id="sneaker" src="images/logo_name.png"/>
 							</a>
