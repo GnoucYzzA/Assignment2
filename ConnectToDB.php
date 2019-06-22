@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" type="text/css" href="style.css">
+<style>
+  body{
+    background-color: #08AEEA;
+    background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+
+  }
+</style>
 <body>
 
 
@@ -64,7 +71,7 @@ $stmt->execute();
 $resultSet = $stmt->fetchAll();
 echo '<p>Transaction information:</p>';
 ?>
-<div class="back">
+
 <div id="container">
 <table class="table striped" width="100%" height="40%", border="1">
     <thead>
@@ -96,6 +103,6 @@ echo '<p>Transaction information:</p>';
     </tbody>
   </table>
 </div>
-</div>
+
 </body>
 </html>
