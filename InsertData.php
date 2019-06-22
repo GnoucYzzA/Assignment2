@@ -56,7 +56,7 @@ $sql = "INSERT INTO sneaker(sneakerid, sneakername, unitprice)"
         . " VALUES('$_POST[SneakerID]','$_POST[SneakerName]','$_POST[Price]')";
 $stmt = $pdo->prepare($sql);
 //$stmt->execute();
- if (is_null($_POST[sneakerid])) {
+ if (is_null($_POST[SneakerID])) {
    echo "StudentID must be not null";
  }
  else
