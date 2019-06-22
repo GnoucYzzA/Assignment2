@@ -8,7 +8,12 @@
 ini_set('display_errors', 1);
 echo "Insert database!";
 ?>
-
+<ul>
+    <form name="DeleteData" action="DeleteData.php" method="POST" >
+    <li>Toy ID:</li><li><input type="text" name="ToyID" /></li>
+    <li><button type="submit" value="submit">Delete</button> </li>
+</form>
+</ul>
 <?php
 
 
