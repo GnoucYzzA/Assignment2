@@ -64,8 +64,8 @@ $stmt->execute();
 $resultSet = $stmt->fetchAll();
 echo '<p>Transaction information:</p>';
 ?>
-
-<div id="container" class="back">
+<div class="back">
+<div id="container">
 <table class="table striped" width="100%" height="40%", border="1">
     <thead>
       <tr>
@@ -95,6 +95,7 @@ echo '<p>Transaction information:</p>';
       ?>
     </tbody>
   </table>
+</div>
 </div>
 </body>
 </html>

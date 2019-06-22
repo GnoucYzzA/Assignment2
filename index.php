@@ -79,7 +79,6 @@
 				<a href="#" class="shipping">
 					<div class="wrapper">
 						<div class="column">
-
 							
 							<h2>We Ship Worldwide</h2>
 							<p>We ship worldwide on pretty much all <br/>our items. If not, we’ll state it on the <br/>product page.</p>
