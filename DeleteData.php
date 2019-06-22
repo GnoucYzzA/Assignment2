@@ -38,7 +38,7 @@ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 							<a href="DeleteData.php" title="Delete">Delete</a>
 						</li>
                     </ul>
-                    <h1 align="center">DELETE DATA FROM DATABASE</h1>
+                    <h1 align="center">DELETE DATA</h1>
 
                     <ul margin: center;>
                          <form name="DeleteData" action="DeleteData.php" method="POST" >
