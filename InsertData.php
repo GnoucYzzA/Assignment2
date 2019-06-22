@@ -53,7 +53,7 @@ if($pdo === false){
 //$stmt->bindParam(':class', 'GCD018');
 //$stmt->execute();
 //$sql = "INSERT INTO student(stuid, fname, email, classname) VALUES('SV02', 'Hong Thanh','thanhh@fpt.edu.vn','GCD018')";
-$sql = "INSERT INTO sneaker(sneakerid, sneakername, unitprice, date)"
+$sql = "INSERT INTO sneaker(sneakerid, sneakername, unitprice, checkdate)"
         . " VALUES('$_POST[SneakerID]','$_POST[SneakerName]','$_POST[Price]',$_POST[Date])";
 $stmt = $pdo->prepare($sql);
 //$stmt->execute();

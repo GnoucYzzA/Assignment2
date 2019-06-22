@@ -60,7 +60,7 @@ echo '<p>Students information:</p>';
         <td scope="row"><?php echo $row['sneakerid'] ?></td>
         <td><?php echo $row['sneakername'] ?></td>
         <td><?php echo $row['unitprice'] ?></td>
-        <td><?php echo $row['date'] ?></td>
+        <td><?php echo $row['checkdate'] ?></td>
         
       </tr>
      
