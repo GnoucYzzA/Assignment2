@@ -3,7 +3,9 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <style>
 body{
-  background-image: radial-gradient( circle 951px at 5.8% 75.8%,  rgba(146,253,193,1) 0%, rgba(146,187,254,1) 90% );
+  background-color: #FAACA8;
+background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
+
 }
 </style>
 <body>
