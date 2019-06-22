@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" type="text/css" href="https://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" type="text/css" href="style.css">
 <style>
 body{
   background-color: #8EC5FC;
