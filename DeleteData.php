@@ -49,8 +49,8 @@ echo "Delete database!";
 <ul>
     <form name="DeleteData" action="DeleteData.php" method="POST" >
     <h2 text-align: center;>Toy ID:</h2><input type="text" name="ToyID" />
-    <br>
-    <button type="submit" class="btn btn-primary">Delete</button>
+
+    <button type="button" class="btn btn-primary">Delete</button>
 </form>
 </ul>
 <?php
