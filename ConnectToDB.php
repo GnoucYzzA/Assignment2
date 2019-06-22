@@ -65,7 +65,7 @@ echo '<p>Students information:</p>';
 
 ?>
 <div id="container">
-<table class="table table-bordered table-condensed" border="1">
+<table class="table striped">
     <thead>
       <tr>
         <th>ToyID</th>
