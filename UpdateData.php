@@ -5,7 +5,7 @@
 <h1>UPDATE DATA TO DATABASE</h1>
 
 <?php
-ini_set('display_errors', 1);
+
 echo "Update database!";
 ?>
 
