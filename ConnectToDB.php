@@ -3,8 +3,9 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <style>
 body{
-  background-color: #FAACA8;
-background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
+  background-color: #8EC5FC;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
 
 }
 </style>
