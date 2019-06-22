@@ -34,10 +34,11 @@
 					</ul>
 					
 				</div>
-			</div>
+      </div>
+
+
+
 <?php
-
-
 if (empty(getenv("DATABASE_URL"))){
     echo '<p>The DB does not exist</p>';
     $pdo = new PDO('pgsql:host=localhost;port=5432;dbname=mydb', 'postgres', '123456');
@@ -61,11 +62,11 @@ $stmt = $pdo->prepare($sql);
 $stmt->setFetchMode(PDO::FETCH_ASSOC);
 $stmt->execute();
 $resultSet = $stmt->fetchAll();
-echo '<p>Students information:</p>';
-
+echo '<p>Transaction information:</p>';
 ?>
-<div id="container">
-<table class="table striped" width="100%", height="40%", border="1">
+
+<div id="container" class="back">
+<table class="table striped" width="100%" height="40%", border="1">
     <thead>
       <tr>
         <th>ToyID</th>
