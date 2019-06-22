@@ -40,7 +40,7 @@ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 					</ul>
 </div>
         </div>
-<h1>DELETE DATA FROM DATABASE</h1>
+<h1 text-align: center;>DELETE DATA FROM DATABASE</h1>
 
 <?php
 
