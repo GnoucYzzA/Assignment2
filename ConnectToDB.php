@@ -9,7 +9,37 @@
 ini_set('display_errors', 1);
 echo "Welcome to ATN company!";
 ?>
-
+<div id="menu">
+				<div id="menu-content">
+					<!-- Navigation -->
+					<label id="collapse" for="_1">
+						<img  id="menuphoto" src="images/menu.svg">
+					</label>
+					<input id="_1" type="checkbox" name="mycheckbox"/>	
+					<ul id="mainmenu">
+							
+						<li class="submenu">  
+							<a href="ConnectToDB.php" title="Store">View Database</a>
+						</li>
+						<li class="submenu">
+							<a href="InsertData.php" target="_blank" title="Insert">Insert</a>
+						</li>
+						<li class="submenu" id="logoset">
+							<a href="index.html">
+								<img id="logo" src="images/Sneaker_logo.svg"/> <br/> 
+								<img id="sneaker" src="images/logo_name.png"/>
+							</a>
+						</li>
+						<li class="submenu">
+							<a href="UpdateData.php" title="Update">Update</a>
+						</li>
+						<li class="submenu">
+							<a href="DeleteData.php" title="Delete">Delete</a>
+						</li>
+					</ul>
+					
+				</div>
+			</div>
 <?php
 
 

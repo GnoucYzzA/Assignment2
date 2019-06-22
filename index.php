@@ -12,6 +12,7 @@
     <body>
 		<!-- Header -->
         <header>
+			
 			<div id="header-top-left">
 				<!-- Search form -->
 				<div id="search-form">
@@ -53,9 +54,9 @@
 							<a href="InsertData.php" target="_blank" title="Insert">Insert</a>
 						</li>
 						<li class="submenu" id="logoset">
-							<a href="index.html">
+							<a href="index.php">
 								<img id="logo" src="images/Sneaker_logo.svg"/> <br/> 
-								<img id="sneaker" src="images/logo_name.png"/>
+								<img id="companyname" src="images/logo_name.png"/>
 							</a>
 						</li>
 						<li class="submenu">
