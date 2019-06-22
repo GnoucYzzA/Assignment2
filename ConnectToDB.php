@@ -4,7 +4,7 @@
 <style>
   body{
     background-color: #08AEEA;
-    background-image: linear-gradient(0deg, #2AF598 0%, #08AEEA 100%);
+    background-image: linear-gradient(0deg, #08AEEA 100%, #2AF598 0%);
 
   }
 </style>
