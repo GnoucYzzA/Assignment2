@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
 <title>Insert data to PostgreSQL with php - creating a simple web application</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css" />
 <style>
 li {
 list-style: none;
@@ -10,6 +12,36 @@ list-style: none;
 </style>
 </head>
 <body>
+<div> 
+	<div id="menu-content">
+		<!-- Navigation -->
+			<label id="collapse" for="_1">
+				<img  id="menuphoto" src="images/menu.svg">
+			</label>
+			<input id="_1" type="checkbox" name="mycheckbox"/>	
+			    <ul id="mainmenu">	
+					<li class="submenu">  
+						<a href="ConnectToDB.php" title="Store">View Database</a>
+					</li>
+					<li class="submenu">
+						<a href="InsertData.php" target="_blank" title="Insert">Insert</a>
+					</li>
+					<li class="submenu" id="logoset">
+						<a href="index.php">
+						    <img id="logo" src="images/Sneaker_logo.svg"/> <br/> 
+						    <img id="sneaker" src="images/logo_name.png"/>
+					    </a>
+					</li>
+					<li class="submenu">
+						<a href="UpdateData.php" title="Update">Update</a>
+					</li>
+					<li class="submenu">
+						<a href="DeleteData.php" title="Delete">Delete</a>
+					</li>
+                </ul>
+            <br/>
+
+</div>
 <h1>INSERT DATA TO DATABASE</h1>
 <h2>Enter data into table</h2>
 <ul>
