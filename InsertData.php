@@ -4,10 +4,18 @@
 <title>Insert data to PostgreSQL with php - creating a simple web application</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" type="text/css" href="style.css" />
 <style>
 li {
 list-style: none;
+}
+#ul{
+    text-align: center;
+	margin-right: 6.5%;
+}
+body{
+  background-color: #8EC5FC;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 }
 </style>
 </head>
@@ -42,16 +50,14 @@ list-style: none;
             <br/>
 
 </div>
-<h1>INSERT DATA TO DATABASE</h1>
-<h2>Enter data into table</h2>
-<ul>
+<ul id="ul">
     <form name="InsertData" action="InsertData.php" method="POST" >
-<li>Toy ID:</li><li><input type="text" name="ToyID" /></li>
-<li>Toy Name:</li><li><input type="text" name="ToyName" /></li>
-<li>Price:</li><li><input type="text" name="Price" /></li>
-<li>Date:</li><li><input type="text" name="Date" /></li>
-<li><input type="submit" /></li>
-</form>
+    <li>Toy ID:</li><li><input type="text" name="ToyID" /></li>
+    <li>Toy Name:</li><li><input type="text" name="ToyName" /></li>
+    <li>Price:</li><li><input type="text" name="Price" /></li>
+    <li>Date:</li><li><input type="text" name="Date" /></li>
+    <li><input type="submit" /></li>
+    </form>
 </ul>
 
 <?php
