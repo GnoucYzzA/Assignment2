@@ -76,7 +76,7 @@ echo '<p>Transaction information:</p>';
       <tr>
         <th>ToyID</th>
         <th>ToyName</th>
-        <th>Price</th>
+        <th>Price(VND)</th>
         <th>Date</th>
       </tr>
     </thead>
