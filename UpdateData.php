@@ -30,8 +30,6 @@ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 								<img id="logo" src="images/Sneaker_logo.svg"/> <br/> 
 								<img id="sneaker" src="images/logo_name.png"/>
 							</a>
-						</li>
-                        <li class="submenu">
                             <form name="UpdateData" action="UpdateData.php" method="POST" >
                                 <li>Toy ID:</li><li><input type="text" name="ToyID" /></li>
                                 <li>Toy Name:</li><li><input type="text" name="ToyName" /></li>
@@ -39,7 +37,8 @@ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
                                 <li>Date:</li><li><input type="text" name="Date" /></li>
                                 <li><button type="submit" value="submit">Update</button> </li>
                             </form>
-                        </li>
+						</li>
+
 						<li class="submenu">
 							<a href="UpdateData.php" title="Update">Update</a>
 						</li>
