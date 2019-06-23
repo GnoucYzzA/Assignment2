@@ -30,6 +30,12 @@ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 								<img id="logo" src="images/Sneaker_logo.svg"/> <br/> 
 								<img id="sneaker" src="images/logo_name.png"/>
 							</a>
+                            <form name="DeleteData" action="DeleteData.php" method="POST" >
+                            <p text-align: center;>Toy ID:</p>
+                            <input type="text" name="ToyID" /><br>
+                            <br>
+                            <button type="submit" class="btn btn-primary">Delete</button>
+                        </form>
 						</li>
 						<li class="submenu">
 							<a href="UpdateData.php" title="Update">Update</a>
@@ -39,14 +45,7 @@ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 						</li>
                     </ul>
                     <br>
-                    <ul align="center">
-                         <form name="DeleteData" action="DeleteData.php" method="POST" >
-                            <p text-align: center;>Toy ID:</p>
-                            <input type="text" name="ToyID" /><br>
-                            <br>
-                            <button type="submit" class="btn btn-primary">Delete</button>
-                        </form>
-                    </ul>
+
 </div>
         </div>
 
