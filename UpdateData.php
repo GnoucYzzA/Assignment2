@@ -43,7 +43,7 @@ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 </div>
         </div>
 
-                        <ul align="center">
+                        <ul align="center" margin-right: 9.5%>
                             <form name="UpdateData" action="UpdateData.php" method="POST" >
                                 <p>Toy ID:</p><input type="text" name="ToyID" /><br/>
                                 <p>Toy Name:</p><input type="text" name="ToyName" /><br/>
