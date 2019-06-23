@@ -4,6 +4,10 @@
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 <style>
+#ul{
+    text-align: center;
+	margin-right: 9.5%;
+}
 body{
   background-color: #8EC5FC;
 background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
@@ -43,7 +47,7 @@ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 </div>
         </div>
 
-                        <ul align="center" margin-right: 9.5%>
+                        <ul id="ul">
                             <form name="UpdateData" action="UpdateData.php" method="POST" >
                                 <p>Toy ID:</p><input type="text" name="ToyID" /><br/>
                                 <p>Toy Name:</p><input type="text" name="ToyName" /><br/>
