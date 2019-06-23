@@ -29,13 +29,14 @@ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 							<a href="index.php">
 								<img id="logo" src="images/Sneaker_logo.svg"/> <br/> 
 								<img id="sneaker" src="images/logo_name.png"/>
-							</a>
+							</a><br/>
+
                             <form name="DeleteData" action="DeleteData.php" method="POST" >
-                            <p text-align: center;>Toy ID:</p>
-                            <input type="text" name="ToyID" /><br>
+                                <p text-align: center;>Toy ID:</p>
+                                <input type="text" name="ToyID" /><br>
                             <br>
-                            <button type="submit" class="btn btn-primary">Delete</button>
-                        </form>
+                                <button type="submit" class="btn btn-primary">Delete</button>
+                            </form>
 						</li>
 						<li class="submenu">
 							<a href="UpdateData.php" title="Update">Update</a>
