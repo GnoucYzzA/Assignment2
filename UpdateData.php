@@ -1,6 +1,53 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<style>
+body{
+  background-color: #8EC5FC;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+</style>
 <body>
+<div> 
+				<div id="menu-content">
+					<!-- Navigation -->
+					<label id="collapse" for="_1">
+						<img  id="menuphoto" src="images/menu.svg">
+					</label>
+					<input id="_1" type="checkbox" name="mycheckbox"/>	
+					<ul id="mainmenu">
+							
+						<li class="submenu">  
+							<a href="ConnectToDB.php" title="Store">View Database</a>
+						</li>
+						<li class="submenu">
+							<a href="InsertData.php" target="_blank" title="Insert">Insert</a>
+						</li>
+						<li class="submenu" id="logoset">
+							<a href="index.php">
+								<img id="logo" src="images/Sneaker_logo.svg"/> <br/> 
+								<img id="sneaker" src="images/logo_name.png"/>
+							</a><br/>
+
+                            <form name="DeleteData" action="DeleteData.php" method="POST" >
+                                <p text-align: center;>Toy ID:</p>
+                                <input type="text" name="ToyID" /><br>
+                            <br>
+                                <button type="submit" class="btn btn-primary">Delete</button>
+                            </form>
+						</li>
+						<li class="submenu">
+							<a href="UpdateData.php" title="Update">Update</a>
+						</li>
+						<li class="submenu">
+							<a href="DeleteData.php" title="Delete">Delete</a>
+						</li>
+                    </ul>
+                    <br>
+
+</div>
+        </div>
 
 <h1>UPDATE DATA TO DATABASE</h1>
 
