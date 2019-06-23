@@ -6,7 +6,7 @@
 <style>
 #ul{
     text-align: center;
-	margin-right: 9.5%;
+	margin-right: 6.5%;
 }
 body{
   background-color: #8EC5FC;
@@ -49,11 +49,12 @@ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 
                         <ul id="ul">
                             <form name="UpdateData" action="UpdateData.php" method="POST" >
-                                <p>Toy ID:</p><input type="text" name="ToyID" /><br/>
-                                <p>Toy Name:</p><input type="text" name="ToyName" /><br/>
-                                <p>Price:</p><input type="text" name="Price" /><br/>
-                                <p>Date:</p><input type="text" name="Date" /><br/>
-                                <li><button type="submit" class="btn btn-primary">Update</button></li>
+                                <p>Toy ID:</p><input type="text" name="ToyID" />
+                                <p>Toy Name:</p><input type="text" name="ToyName" />
+                                <p>Price:</p><input type="text" name="Price" />
+                                <p>Date:</p><input type="text" name="Date" />
+                                <br>
+                                <button type="submit" class="btn btn-primary">Update</button>
                             </form>
                         </ul>
 
