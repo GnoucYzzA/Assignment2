@@ -56,7 +56,7 @@ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
     <li>Toy Name:</li><li><input type="text" name="ToyName" /></li>
     <li>Price:</li><li><input type="text" name="Price" /></li>
     <li>Date:</li><li><input type="text" name="Date" /></li>
-    <li><button type="submit" class="btn btn-primary">Update</button></li>
+    <li><button type="submit" class="btn btn-primary">Insert to Database</button></li>
     </form>
 </ul>
 
