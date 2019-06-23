@@ -31,11 +31,11 @@ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 								<img id="sneaker" src="images/logo_name.png"/>
 							</a>
                             <form name="UpdateData" action="UpdateData.php" method="POST" >
-                                <li>Toy ID:</li><li><input type="text" name="ToyID" /></li>
-                                <li>Toy Name:</li><li><input type="text" name="ToyName" /></li>
-                                <li>Price:</li><li><input type="text" name="Price" /></li>
-                                <li>Date:</li><li><input type="text" name="Date" /></li>
-                                <li><button type="submit" value="submit">Update</button> </li>
+                                Toy ID:<li><input type="text" name="ToyID" /></li>
+                                Toy Name:<li><input type="text" name="ToyName" /></li>
+                                Price:<li><input type="text" name="Price" /></li>
+                                Date:<li><input type="text" name="Date" /></li>
+                                <button type="submit" value="submit">Update</button> </li>
                             </form>
 						</li>
 
