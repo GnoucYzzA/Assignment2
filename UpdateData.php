@@ -29,14 +29,7 @@ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 							<a href="index.php">
 								<img id="logo" src="images/Sneaker_logo.svg"/> <br/> 
 								<img id="sneaker" src="images/logo_name.png"/>
-							</a><br/>
-
-                            <form name="DeleteData" action="DeleteData.php" method="POST" >
-                                <p text-align: center;>Toy ID:</p>
-                                <input type="text" name="ToyID" /><br>
-                            <br>
-                                <button type="submit" class="btn btn-primary">Delete</button>
-                            </form>
+							</a>
 						</li>
 						<li class="submenu">
 							<a href="UpdateData.php" title="Update">Update</a>
@@ -57,14 +50,14 @@ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 echo "Update database!";
 ?>
 
-<ul>
+<ul id="mainmenu">
     <form name="UpdateData" action="UpdateData.php" method="POST" >
-    <li>Toy ID:</li><li><input type="text" name="ToyID" /></li>
-    <li>Toy Name:</li><li><input type="text" name="ToyName" /></li>
-    <li>Price:</li><li><input type="text" name="Price" /></li>
-    <li>Date:</li><li><input type="text" name="Date" /></li>
-    <li><button type="submit" value="submit">Update</button> </li>
-</form>
+        <li>Toy ID:</li><li><input type="text" name="ToyID" /></li>
+        <li>Toy Name:</li><li><input type="text" name="ToyName" /></li>
+        <li>Price:</li><li><input type="text" name="Price" /></li>
+        <li>Date:</li><li><input type="text" name="Date" /></li>
+        <li><button type="submit" value="submit">Update</button> </li>
+    </form>
 </ul>
 
 <?php
