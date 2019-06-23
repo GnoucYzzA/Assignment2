@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -13,6 +14,7 @@ body{
 background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 }
 </style>
+</head>
 <body>
 <div> 
 				<div id="menu-content">
