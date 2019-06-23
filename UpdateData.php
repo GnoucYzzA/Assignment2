@@ -31,7 +31,7 @@ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 								<img id="sneaker" src="images/logo_name.png"/>
 							</a>
 						</li>
-                        <li class="submenu">
+                        <li class="submenu" id="logoset">
                             <form name="UpdateData" action="UpdateData.php" method="POST" >
                                 <p>Toy ID:</p><input type="text" name="ToyID" /><br/>
                                 <p>Toy Name:</p><input type="text" name="ToyName" /><br/>
