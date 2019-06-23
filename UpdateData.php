@@ -50,7 +50,7 @@ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
                         Toy Name:<li><input type="text" name="ToyName" /></li>
                         Price:<li><input type="text" name="Price" /></li>
                         Date:<li><input type="text" name="Date" /></li>
-                        <button type="submit" value="submit">Update</button> </li>
+                        <button type="submit" class="btn btn-primary">Update</button>
                     </form>
 
 
