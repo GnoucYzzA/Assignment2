@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <style>
 body{
   background-color: #8EC5FC;
@@ -71,8 +70,8 @@ echo '<p>Transaction information:</p>';
 
         
 <div id="container">
-<table class="table striped" width="100%" height="40%", border="1">
-    <thead>
+<table class="table" width="100%" height="40%", border="1">
+    <thead class="thead-dark">
       <tr>
         <th>ToyID</th>
         <th>ToyName</th>
