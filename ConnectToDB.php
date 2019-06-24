@@ -2,10 +2,12 @@
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
 body{
@@ -46,62 +48,56 @@ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 					</ul>
 </div>
         </div>
-<?php
-if (empty(getenv("DATABASE_URL"))){
-    echo '<p>The DB does not exist</p>';
-    $pdo = new PDO('pgsql:host=localhost;port=5432;dbname=mydb', 'postgres', '123456');
-}  else {
-     echo '<p>The DB exists</p>';
-     echo getenv("dbname");
-   $db = parse_url(getenv("DATABASE_URL"));
-   $pdo = new PDO("pgsql:" . sprintf(
+        <?php
+      if (empty(getenv("DATABASE_URL"))){
+        $pdo = new PDO('pgsql:host=localhost;port=5432;dbname=mydb', 'postgres', '123456');
+      }  
+      else{
+        echo getenv("dbname");
+        $db = parse_url(getenv("DATABASE_URL"));
+        $pdo = new PDO("pgsql:" . sprintf(
         "host=ec2-54-83-9-36.compute-1.amazonaws.com;port=5432;user=mnvkrpgighmovm;password=ec88450374a0be701bd72da2753e03f48af3f3e48c9644b862a58dd677d22cd5;dbname=dfv6jafh0t2m8e",
         $db["host"],
         $db["port"],
         $db["user"],
         $db["pass"],
         ltrim($db["path"], "/")
-   ));
-}  
+        ));
+      }  
 
-$sql = "SELECT * FROM sneakertoy";
-$stmt = $pdo->prepare($sql);
-//Thiết lập kiểu dữ liệu trả về
-$stmt->setFetchMode(PDO::FETCH_ASSOC);
-$stmt->execute();
-$resultSet = $stmt->fetchAll();
-echo '<p>Transaction information:</p>';
-?>
+      $sql = "SELECT * FROM sneakertoy ORDER BY toyid";
+      $stmt = $pdo->prepare($sql);
+      $stmt->setFetchMode(PDO::FETCH_ASSOC);
+      $stmt->execute();
+      $resultSet = $stmt->fetchAll();
+      ?>
 
-        
-<div class="w3-container">
-<table class="w3-table-all w3-hoverable" width="100%" height = "50px", border="1", opacity="0.6">
-    <thead class="thead-dark">
-      <tr class="w3-light-blue">
-        <th>StoreID</th>
-        <th>Accountant</th>
-        <th>Revenue (VND)</th>
-        <th>Date</th>
-      </tr>
-    </thead>
-    <tbody>
-      <?php
-      // tạo vòng lặp 
-         //while($r = mysql_fetch_array($result)){
-             foreach ($resultSet as $row) {
-      ?>
-   
-      <tr>
-        <td scope="row"><?php echo $row['toyid'] ?></td>
-        <td><?php echo $row['tname'] ?></td>
-        <td><?php echo $row['unitprice'] ?></td>
-        <td><?php echo $row['checkdate'] ?></td>
-        
-      </tr>
-     
-      <?php
-        }
-      ?>
+    <div class="w3-responsive w3-container">
+      <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable" border="1">
+        <thead>
+          <tr>
+            <th>Toy ID</th>
+            <th>Toy Name</th>
+            <th>Unit Price</th>
+            <th>Last Time Check</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <?php
+          foreach ($resultSet as $row) {
+          ?>
+
+          <tr>
+            <td scope="row"><?php echo $row['toyid'] ?></td>
+            <td><?php echo $row['tname'] ?></td>
+            <td><?php echo $row['unitprice'] ?></td>
+            <td><?php echo $row['checkdate'] ?></td>
+          </tr>
+
+          <?php
+          }
+          ?>
     </tbody>
   </table>
 </div>
