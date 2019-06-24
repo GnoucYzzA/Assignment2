@@ -29,7 +29,7 @@ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 							<a href="ConnectToDB.php" title="Store">View Database</a>
 						</li>
 						<li class="submenu">
-							<a href="InsertData.php" target="_blank" title="Insert">Insert</a>
+							<a href="InsertData.php" title="Insert">Insert</a>
 						</li>
 						<li class="submenu" id="logoset">
 							<a href="index.php">
@@ -50,10 +50,10 @@ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
         </div>
     <ul id="ul">
         <form name="UpdateData" action="UpdateData.php" method="POST" >
-            <label>Store ID:</label><input type="text" name="ToyID" />
-            <label>Accountant:</label><input type="text" name="ToyName" />
-            <label>Revenue:</label><input type="text" name="Price" />
-            <label>Date:</label><input type="text" name="Date" />
+            <label>Store ID:</label><li><input type="text" name="ToyID" /></li>
+            <label>Accountant:</label><li><input type="text" name="ToyName" /></li>
+            <label>Revenue:</label><li><input type="text" name="Price" /></li>
+            <label>Date:</label><li><input type="text" name="Date" /></li>
             <br>
             <button type="submit" class="btn btn-primary">Update</button>
             </form>
