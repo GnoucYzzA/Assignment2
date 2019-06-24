@@ -52,11 +52,11 @@ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 </div>
 <ul id="ul">
     <form name="InsertData" action="InsertData.php" method="POST" >
-        <label>Store ID:</label><input type="text" name="ToyID" />
-        <label>Accountant:</label><input type="text" name="ToyName" />
-        <label>Revenue:</label><input type="text" name="Price" />
-        <label>Date:</label><input type="text" name="Date" />
-    <li><button type="submit" class="btn btn-primary">Insert to Database</button></li>
+        <label>Store ID:</label><li><input type="text" name="ToyID" /></li>
+        <label>Accountant:</label><li><input type="text" name="ToyName" /></li>
+        <label>Revenue:</label><li><input type="text" name="Price" /></li>
+        <label>Date:</label><li><input type="text" name="Date" /></li>
+        <button type="submit" class="btn btn-primary">Insert to Database</button>
     </form>
 </ul>
 
