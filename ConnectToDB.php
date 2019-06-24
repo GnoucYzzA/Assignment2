@@ -73,12 +73,12 @@ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
       ?>
 
     <div class="w3-responsive w3-container">
-      <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable" border="1">
+      <table class="w3-table w3-striped w3-bordered w3-hoverable" border="1">
         <thead>
           <tr>
-            <th>Toy ID</th>
-            <th>Toy Name</th>
-            <th>Unit Price</th>
+            <th>Store ID</th>
+            <th>Accountant</th>
+            <th>Revenue</th>
             <th>Last Time Check</th>
           </tr>
         </thead>
