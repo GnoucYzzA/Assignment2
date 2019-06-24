@@ -4,6 +4,7 @@
 <title>Insert data to PostgreSQL with php - creating a simple web application</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="style.css" />
 
@@ -58,6 +59,7 @@ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
         <label>Accountant:</label><li><input type="text" name="ToyName" /></li>
         <label>Revenue:</label><li><input type="text" name="Price" /></li>
         <label>Date:</label><li><input type="text" name="Date" /></li>
+        <br>
         <button type="submit" class="btn btn-primary">Insert to Database</button>
     </form>
 </ul>

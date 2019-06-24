@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
 <style>
 body{
   background-color: #8EC5FC;
@@ -70,10 +74,10 @@ echo '<p>Transaction information:</p>';
 ?>
 
         
-<div id="container">
-<table class="table" width="100%" height="40%", border="1">
+<div class="w3-container">
+<table class="w3-table-all w3-hoverable" width="100%", border="1">
     <thead class="thead-dark">
-      <tr>
+      <tr class="w3-light-grey">
         <th>StoreID</th>
         <th>Accountant</th>
         <th>Revenue (VND)</th>
