@@ -75,7 +75,7 @@ echo '<p>Transaction information:</p>';
 
         
 <div class="w3-container">
-<table class="w3-table-all w3-hoverable" width="100%" height = "50px", border="1">
+<table class="w3-table-all w3-hoverable" width="100%" height = "50px", border="1", opacity="0.6">
     <thead class="thead-dark">
       <tr class="w3-light-blue">
         <th>StoreID</th>
