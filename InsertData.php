@@ -4,7 +4,7 @@
 <title>Insert data to PostgreSQL with php - creating a simple web application</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
 li {
 list-style: none;
