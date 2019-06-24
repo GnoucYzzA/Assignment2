@@ -25,7 +25,7 @@ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 							<a href="ConnectToDB.php" title="Store">View Database</a>
 						</li>
 						<li class="submenu">
-							<a href="InsertData.php" target="_blank" title="Insert">Insert</a>
+							<a href="InsertData.php" title="Insert">Insert</a>
 						</li>
 						<li class="submenu" id="logoset">
 							<a href="index.php">
@@ -74,9 +74,9 @@ echo '<p>Transaction information:</p>';
 <table class="table" width="100%" height="40%", border="1">
     <thead class="thead-dark">
       <tr>
-        <th>ToyID</th>
-        <th>ToyName</th>
-        <th>Price(VND)</th>
+        <th>StoreID</th>
+        <th>Accountant</th>
+        <th>Revenue (VND)</th>
         <th>Date</th>
       </tr>
     </thead>

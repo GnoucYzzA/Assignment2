@@ -48,17 +48,16 @@ background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 
 </div>
         </div>
-
-                        <ul id="ul">
-                            <form name="UpdateData" action="UpdateData.php" method="POST" >
-                                <p>Toy ID:</p><input type="text" name="ToyID" />
-                                <p>Toy Name:</p><input type="text" name="ToyName" />
-                                <p>Price:</p><input type="text" name="Price" />
-                                <p>Date:</p><input type="text" name="Date" />
-                                <br>
-                                <button type="submit" class="btn btn-primary">Update</button>
-                            </form>
-                        </ul>
+    <ul id="ul">
+        <form name="UpdateData" action="UpdateData.php" method="POST" >
+            <label>Store ID:</label><input type="text" name="ToyID" />
+            <label>Accountant:</label><input type="text" name="ToyName" />
+            <label>Revenue:</label><input type="text" name="Price" />
+            <label>Date:</label><input type="text" name="Date" />
+            <br>
+            <button type="submit" class="btn btn-primary">Update</button>
+            </form>
+    </ul>
 
 
 
