@@ -101,7 +101,7 @@
         //$stmt->bindParam(':class', 'GCD018');
         //$stmt->execute();
         //$sql = "INSERT INTO student(stuid, fname, email, classname) VALUES('SV02', 'Hong Thanh','thanhh@fpt.edu.vn','GCD018')";
-        $sql = "INSERT INTO sneakertoy(toyid, tname, unitprice, checkdate)"
+        $sql = "INSERT INTO sneakertoy(toyid, tname, unitprice)"
             . " VALUES('$_POST[ToyID]','$_POST[ToyName]','$_POST[Price]')";
         $stmt = $pdo->prepare($sql);
         //$stmt->execute();

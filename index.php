@@ -51,7 +51,7 @@
 							<a href="ConnectToDB.php" title="Store">View Database</a>
 						</li>
 						<li class="submenu">
-							<a href="InsertData.php" target="_blank" title="Insert">Insert</a>
+							<a href="InsertData.php" title="Insert">Insert</a>
 						</li>
 						<li class="submenu" id="logoset">
 							<a href="index.php">
