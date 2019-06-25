@@ -65,8 +65,6 @@
                 <li><input type="text" name="ToyName" /></li>
                 <label>Revenue:</label>
                 <li><input type="text" name="Price" /></li>
-                <label>Date:</label>
-                <li><input type="text" name="Date" /></li>
                 <br>
                 <button type="submit" class="btn btn-primary">Insert to Database</button>
             </form>
