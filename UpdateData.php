@@ -55,11 +55,11 @@
     <ul id="ul">
         <form name="UpdateData" action="UpdateData.php" method="POST">
             <label>Store ID:</label>
-            <input type="text" name="ToyID" />
+            <li><input type="text" name="ToyID" /></li>
             <label>Accountant:</label>
-            <input type="text" name="ToyName" />
+            <li><input type="text" name="ToyName" /></li>
             <label>Revenue:</label>
-            <input type="text" name="Price" />
+            <li><input type="text" name="Price" /></li>
             <br>
             <button type="submit" class="btn btn-primary">Update</button>
         </form>
