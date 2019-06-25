@@ -89,7 +89,7 @@
     }
 
 
-    $sql = "UPDATE sneakertoy SET tname = '$_POST[ToyName]', unitprice = '$_POST[Price]', checkdate = '$_POST[Date]' WHERE toyid = '$_POST[ToyID]'";
+    $sql = "UPDATE sneakertoy SET tname = '$_POST[ToyName]', unitprice = '$_POST[Price]' WHERE toyid = '$_POST[ToyID]'";
     $stmt = $pdo->prepare($sql);
 
     if (is_null($_POST[ToyID]) == FALSE) {

@@ -102,7 +102,7 @@
         //$stmt->execute();
         //$sql = "INSERT INTO student(stuid, fname, email, classname) VALUES('SV02', 'Hong Thanh','thanhh@fpt.edu.vn','GCD018')";
         $sql = "INSERT INTO sneakertoy(toyid, tname, unitprice, checkdate)"
-            . " VALUES('$_POST[ToyID]','$_POST[ToyName]','$_POST[Price]','$_POST[Date]')";
+            . " VALUES('$_POST[ToyID]','$_POST[ToyName]','$_POST[Price]')";
         $stmt = $pdo->prepare($sql);
         //$stmt->execute();
         if (is_null($_POST[ToyID])) {
