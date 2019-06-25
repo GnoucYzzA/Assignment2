@@ -1,115 +1,122 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Insert data to PostgreSQL with php - creating a simple web application</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Insert data to PostgreSQL with php - creating a simple web application</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css" />
 
-<style>
-li {
-list-style: none;
-}
-#ul{
-    text-align: center;
-	margin-right: 6.5%;
-}
-body{
-  background-color: #8EC5FC;
-background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
-}
-</style>
+    <style>
+        li {
+            list-style: none;
+        }
+
+        #ul {
+            text-align: center;
+            margin-right: 6.5%;
+        }
+
+        body {
+            background-color: #8EC5FC;
+            background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+        }
+    </style>
 </head>
+
 <body>
-<div> 
-	<div id="menu-content">
-		<!-- Navigation -->
-			<label id="collapse" for="_1">
-				<img  id="menuphoto" src="images/menu.svg">
-			</label>
-			<input id="_1" type="checkbox" name="mycheckbox"/>	
-			    <ul id="mainmenu">	
-					<li class="submenu">  
-						<a href="ConnectToDB.php" title="Store">View Database</a>
-					</li>
-					<li class="submenu">
-						<a href="InsertData.php" title="Insert">Insert</a>
-					</li>
-					<li class="submenu" id="logoset">
-						<a href="index.php">
-						    <img id="logo" src="images/Sneaker_logo.svg"/> <br/> 
-						    <img id="sneaker" src="images/logo_name.png"/>
-					    </a>
-					</li>
-					<li class="submenu">
-						<a href="UpdateData.php" title="Update">Update</a>
-					</li>
-					<li class="submenu">
-						<a href="DeleteData.php" title="Delete">Delete</a>
-					</li>
-                </ul>
-            <br/>
+    <div>
+        <div id="menu-content">
+            <!-- Navigation -->
+            <label id="collapse" for="_1">
+                <img id="menuphoto" src="images/menu.svg">
+            </label>
+            <input id="_1" type="checkbox" name="mycheckbox" />
+            <ul id="mainmenu">
+                <li class="submenu">
+                    <a href="ConnectToDB.php" title="Store">View Database</a>
+                </li>
+                <li class="submenu">
+                    <a href="InsertData.php" title="Insert">Insert</a>
+                </li>
+                <li class="submenu" id="logoset">
+                    <a href="index.php">
+                        <img id="logo" src="images/Sneaker_logo.svg" /> <br />
+                        <img id="sneaker" src="images/logo_name.png" />
+                    </a>
+                </li>
+                <li class="submenu">
+                    <a href="UpdateData.php" title="Update">Update</a>
+                </li>
+                <li class="submenu">
+                    <a href="DeleteData.php" title="Delete">Delete</a>
+                </li>
+            </ul>
+            <br />
 
-</div>
-<ul id="ul">
-    <form name="InsertData" action="InsertData.php" method="POST" >
-        <label>Store ID:</label><li><input type="text" name="ToyID" /></li>
-        <label>Accountant:</label><li><input type="text" name="ToyName" /></li>
-        <label>Revenue:</label><li><input type="text" name="Price" /></li>
-        <label>Date:</label><li><input type="text" name="Date" /></li>
-        <br>
-        <button type="submit" class="btn btn-primary">Insert to Database</button>
-    </form>
-</ul>
+        </div>
+        <ul id="ul">
+            <form name="InsertData" action="InsertData.php" method="POST">
+                <label>Store ID:</label>
+                <li><input type="text" name="ToyID" /></li>
+                <label>Accountant:</label>
+                <li><input type="text" name="ToyName" /></li>
+                <label>Revenue:</label>
+                <li><input type="text" name="Price" /></li>
+                <label>Date:</label>
+                <li><input type="text" name="Date" /></li>
+                <br>
+                <button type="submit" class="btn btn-primary">Insert to Database</button>
+            </form>
+        </ul>
 
-<?php
+        <?php
 
-if (empty(getenv("DATABASE_URL"))){
-    echo '<p>The DB does not exist</p>';
-    $pdo = new PDO('pgsql:host=localhost;port=5432;dbname=mydb', 'postgres', '123456');
-}  else {
-     
-   $db = parse_url(getenv("DATABASE_URL"));
-   $pdo = new PDO("pgsql:" . sprintf(
-        "host=ec2-54-83-9-36.compute-1.amazonaws.com;port=5432;user=mnvkrpgighmovm;password=ec88450374a0be701bd72da2753e03f48af3f3e48c9644b862a58dd677d22cd5;dbname=dfv6jafh0t2m8e",
-        $db["host"],
-        $db["port"],
-        $db["user"],
-        $db["pass"],
-        ltrim($db["path"], "/")
-   ));
-}  
+        if (empty(getenv("DATABASE_URL"))) {
+            echo '<p>The DB does not exist</p>';
+            $pdo = new PDO('pgsql:host=localhost;port=5432;dbname=mydb', 'postgres', '123456');
+        } else {
 
-if($pdo === false){
-     echo "ERROR: Could not connect Database";
-}
+            $db = parse_url(getenv("DATABASE_URL"));
+            $pdo = new PDO("pgsql:" . sprintf(
+                "host=ec2-54-83-9-36.compute-1.amazonaws.com;port=5432;user=mnvkrpgighmovm;password=ec88450374a0be701bd72da2753e03f48af3f3e48c9644b862a58dd677d22cd5;dbname=dfv6jafh0t2m8e",
+                $db["host"],
+                $db["port"],
+                $db["user"],
+                $db["pass"],
+                ltrim($db["path"], "/")
+            ));
+        }
 
-//Khởi tạo Prepared Statement
-//$stmt = $pdo->prepare('INSERT INTO student (stuid, fname, email, classname) values (:id, :name, :email, :class)');
+        if ($pdo === false) {
+            echo "ERROR: Could not connect Database";
+        }
 
-//$stmt->bindParam(':id','SV03');
-//$stmt->bindParam(':name','Ho Hong Linh');
-//$stmt->bindParam(':email', 'Linhhh@fpt.edu.vn');
-//$stmt->bindParam(':class', 'GCD018');
-//$stmt->execute();
-//$sql = "INSERT INTO student(stuid, fname, email, classname) VALUES('SV02', 'Hong Thanh','thanhh@fpt.edu.vn','GCD018')";
-$sql = "INSERT INTO sneakertoy(toyid, tname, unitprice, checkdate)"
-        . " VALUES('$_POST[ToyID]','$_POST[ToyName]','$_POST[Price]','$_POST[Date]')";
-$stmt = $pdo->prepare($sql);
-//$stmt->execute();
- if (is_null($_POST[ToyID])) {
-   echo "ToyID must be not null";
- }
- else
- {
-    if($stmt->execute() == TRUE){
-        echo "Record inserted successfully.";
-    } else {
-        echo "Error inserting record: ";
-    }
- }
-?>
+        //Khởi tạo Prepared Statement
+        //$stmt = $pdo->prepare('INSERT INTO student (stuid, fname, email, classname) values (:id, :name, :email, :class)');
+
+        //$stmt->bindParam(':id','SV03');
+        //$stmt->bindParam(':name','Ho Hong Linh');
+        //$stmt->bindParam(':email', 'Linhhh@fpt.edu.vn');
+        //$stmt->bindParam(':class', 'GCD018');
+        //$stmt->execute();
+        //$sql = "INSERT INTO student(stuid, fname, email, classname) VALUES('SV02', 'Hong Thanh','thanhh@fpt.edu.vn','GCD018')";
+        $sql = "INSERT INTO sneakertoy(toyid, tname, unitprice, checkdate)"
+            . " VALUES('$_POST[ToyID]','$_POST[ToyName]','$_POST[Price]','$_POST[Date]')";
+        $stmt = $pdo->prepare($sql);
+        //$stmt->execute();
+        if (is_null($_POST[ToyID])) {
+            echo "ToyID must be not null";
+        } else {
+            if ($stmt->execute() == TRUE) {
+                echo "Record inserted successfully.";
+            } else {
+                echo "Error inserting record: ";
+            }
+        }
+        ?>
 </body>
+
 </html>
